@@ -1,0 +1,41 @@
+:root{
+    --base-color: white;
+    --text-color: black;
+    --primary-color:black;
+}
+.darkmode{
+    --base-color: black;
+    --text-color: wheat;
+    --primary-color: wheat;
+
+}
+body{
+    font-family: sans-serif;
+    background-color: var(--base-color);
+    color: var(--text-color)
+}
+#theme-switch{
+    height: 50px;
+    width: 50px;
+    padding:0;
+    border-radius:50%;
+    display:flex;
+    background-color: var(--base-variant);
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    top: 20px;
+    right: 20px;
+}
+#theme-switch svg{
+    fill: var(--primary-color);
+}
+#theme-switch svg:last-child{
+    display:none;
+}
+.darkmode #theme-switch svg:first-child{
+    display:none;
+}
+.darkmode #theme-switch svg:last-child{
+    display:block;
+}
