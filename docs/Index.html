@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tindahan ni Fredie</title>
+        <link rel="icon" href="fredie.png" sizes="32x32" type="image/png"/>
+        <link rel="stylesheet" type="text/css" href="datatables.css"/>
+        <link rel="stylesheet" type="text/css" href="design.css"/>
+    </head>
+
+    <body>
+        <div class="intro">
+            <img class="logo" src="fredie2.png" style="width:20vh;height:20vh;">
+        </div>
+        <h1 style="text-align: center;">Tindahan Pricing</h1>
+        <table id="tindahanPrice" class="display">
+            <thead>
+                <tr>
+                    <th>Food</th> 
+                    <th>Price</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            
+        </table>
+        <script type="text/javascript" src="jquery-3.7.1.js"></script>
+        <script type="text/javascript" src="moment.min.js"></script>
+        <script type="text/javascript" src="dataTables.js"></script>
+        <script type="text/javascript" src="logo.js"></script>
+        <script>
+            new DataTable('#tindahanPrice', {
+                ajax: 'https://script.google.com/macros/s/AKfycbz3aNH6RmgvpoepLKSLBnEPNEVFRFTjj-R8R4GaJgoz2ANPVStMhQfw48QHxlYjFglj/exec',
+                columns: [
+                    { data: 'Food' },
+                    { data: 'Price' },
+                    { data: 'Category' }
+                ]
+            });
+        </script>
+    </body>
+</html>
