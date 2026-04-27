@@ -1,2 +1,2 @@
 # Tindahan-ni-Fredie
-tindahan ni fredie website
+tindahan ni fredie 
